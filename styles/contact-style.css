@@ -1,0 +1,200 @@
+.nav-block{
+	margin-right: 0%;
+}
+.content h1{
+	font-family: 'intro_boldregular';
+	font-size: 32px;
+	color: #6dbc02;
+	text-transform: uppercase;
+}
+/* Contact Page */
+.content .contact-info{
+	max-width: 800px;
+	margin:0 auto;
+	padding:40px 0 30px 0;	
+}
+.content .map_canvas{
+	max-width:600px;
+	height:290px;
+	margin:0 auto;
+}
+.contact-info .place p{
+	font-family: 'MyriadProRegular';
+	text-align:left;
+	font-size:22.28px;
+	line-height: 24px;
+}
+.contact-info .phone{
+	margin-right: -3%;
+}
+.contact-info .phone a{
+	display: block;
+	font-size: 22.28px;
+	text-align: left;
+	font-family: 'MyriadProRegular';
+	color: #6a6a6a;
+	text-decoration: none;
+	line-height: 24px;
+}
+.contact-info .phone  .mail{
+	margin-bottom:10px;
+}
+.content .contact-form{
+	max-width:540px;
+	margin:0 auto;
+	padding-top:45px;
+	text-align:left;
+}
+.contact-form h3{
+	font-size:18.47px;
+	color:#6dbc02;
+	margin-bottom:30px;
+	font-family: 'MyriadProBold';
+	text-transform: uppercase;
+}
+.contact-form input,.contact-form .town-list,.contact-form .message{
+	width: 96.3%;
+	height: 36px;
+	margin-bottom:25px;
+	font-family: 'MyriadProRegular';
+	font-size: 18.47px;
+	line-height: 36px;
+	background: url(../images/input-bg.png) repeat-x top left;
+	color: #5b5b5b;
+	outline: none;
+	border: 2px solid #c7c7c7;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding:0 1.855%;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box; /*Firefox 1-3*/
+    -webkit-box-sizing: border-box; /* Safari */
+	color:#a3a3a3;
+}
+.contact-form .town-list{
+	width:48.145%;
+	color:#5b5b5b;
+	padding:0  0 0 1.855%;
+}
+.contact-form .message{
+	padding: 1.9% 1.855%;
+	height:120px;
+	line-height:19px;
+}
+.contact-form .submit{
+	width: 29%;
+	height: 31px;
+	margin-left: 68%;
+	font-family: 'MyriadProBold';
+	text-transform: uppercase;
+	line-height: 28px;
+	font-size: 13.47px;
+	color: #6dbc02;
+	background-color: #ffffff;
+	border: 2px solid #c7c7c7;
+	box-shadow: 1px 1px 12px -1px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 1px 1px 12px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 12px -1px rgba(0,0,0,0.75);
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	cursor: pointer;
+	outline: none;
+}
+/*-------------Cтили для select------*/
+
+.selectbox {
+	vertical-align: middle;
+	cursor: pointer;
+}
+.selectbox .select {
+	width:250px;
+	height: 22px;
+	padding:5px 10px;
+	margin-bottom:25px;
+	background: url(../images/input-bg.png) repeat-x top left;
+	color:#5b5b5b;
+	font-family: 'MyriadProRegular';
+	font-size: 18.47px;
+	white-space:nowrap; /* запрещаем перенос */
+	border: 2px solid #c7c7c7;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.selectbox .select .text{
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: left;
+}
+.selectbox .trigger .arrow{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #000;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	opacity: 0.3;
+}
+.selectbox:hover .arrow{
+	opacity: 1;
+	opacity:1;
+}
+.selectbox .dropdown{
+	top: 37px;
+	width: 99.5%;
+	margin: 0;
+	padding: 4px 0;
+	background: #FFF;
+	border: 1px solid #C6CBD0;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+	font: 14px/18px Arial, Tahoma, sans-serif;
+}
+.selectbox li {
+	padding: 5px 10px 6px;
+	color: #231F20;
+	width: 100%;
+}
+.selectbox li.selected {
+	background: #A3ABB1;
+	color: #FFF;
+}
+.selectbox li:hover {
+	background: #08C;
+	color: #FFF;
+}
+.selectbox li.disabled {
+	color: #AAA;
+}
+.selectbox li.disabled:hover {
+	background: none;
+}
+@media screen and (max-width: 1455px){
+	#map_canvas{margin:0 auto!important;}
+	.contact-info .phone{margin-right:0;}
+}
+@media screen and (max-width: 880px){
+	#map_canvas{width:100%!important;}
+	.content .contact-info{width: 98%;}
+}
+@media screen and (max-width:775px){
+	.header .banner{width:100%!important;}
+}
+@media screen and (max-width: 570px){
+	.content .contact-form{width:97%!important;}
+	.selectbox{width:92%;}
+}
+@media screen and (max-width: 420px){
+	.contact-info .place p,.contact-info .phone a{font-size: 20.28px;}
+}
+@media screen and (max-width: 400px){
+	.selectbox .select{width:97%!important;}
+}

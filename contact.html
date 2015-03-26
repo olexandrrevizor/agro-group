@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title>ArgoGroup</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	
+	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/fonts/font.css" rel="stylesheet">
+	<link href="styles/contact-style.css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/selectize.jquery.js"></script>
+	<script src="js/libs-contact.js"></script>
+	
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCrzYCwPjIk3x4OckSkLoHkIwWMlfJRTVc&sensor=SET_TO_TRUE_OR_FALSE"> </script>
+	<script type="text/javascript">
+	 function initialize() {
+	 var latlng = new google.maps.LatLng(50.441252, 30.533326);
+	 var settings = {
+	 zoom: 15,
+	 center: latlng,
+	 mapTypeControl: false,
+	 mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+	 navigationControl: true,
+	 navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+	 mapTypeId: google.maps.MapTypeId.ROADMAP
+	 };
+	 var map = new google.maps.Map(document.getElementById("map_canvas"), settings);
+	 var companyPos = new google.maps.LatLng(50.441252, 30.533326);
+	 var companyMarker = new google.maps.Marker({
+		position: companyPos,
+		map: map,
+		title:"вул. Академіка Богомольця, 7/14, 72, Київ, місто Київ"
+	});
+	companyMarker.setMap(map);
+	 }
+	</script>
+	
+	<!--MAIL-->
+	<link href="styles/toasty.css" rel="stylesheet">
+	<script src="js/toasty-min.js"></script>
+	<script src="js/mail.js"></script>
+	<!--MAIL-->
+	
+</head>
+
+<body onload="initialize()">
+
+<div class="wrapper">
+
+	<header class="header">
+		<div class="nav-block lcol">
+			<a class="logo" href="/"><img src="images/logo.png" alt=""/></a>
+			<ul>
+				<li><img class="lcol" src="images/about.png" alt=""/><a href="http://www.agro-group.net/about.html">о компании</a><br class="clr"/></li>
+				<li><img class="lcol" src="images/products.png" alt=""/><a href="http://www.agro-group.net/fruit.html">продукция</a><br class="clr"/></li>
+				<li><img class="lcol" src="images/contact.png" alt=""/><a href="http://www.agro-group.net/contact.html">контакты</a><br class="clr"/></li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+		<div class="banner rcol">
+			<img src="images/banner-2.png" alt=""/>
+		</div>
+		<div class="clr"></div>
+	</header><!-- .header-->
+
+	<main class="content">
+		<h1>Контакты</h1>
+		<div class="contact-info">
+			<div class="place lcol">
+				<p>Украина, 01024, г. Киев, ул. Академика <br> Богомольца 7/14, офис 72</p>
+			</div>
+			<div class="phone rcol">
+				<a href="mailto:info@agro-group.net" class="mail">info@agro-group.net </a>
+				<a href="tel:+380968019801">+38 093 320 12 34</a>
+				<a href="tel:+380968019801">+38 096 801 98 01</a>
+			</div>
+			<br class="clr"/>
+		</div>
+		<div id="map_canvas" style="max-width:855px;height:410px;margin-left: 22%;"></div>
+		<div class="contact-form">
+			<h3>обратная связь</h3>
+			<form>
+				<input type="text" name="name" placeholder="Ваше имя" id="name_form2" value="" class="require" data-validate="isString" />
+				<select id="town-list" class="town-list" name="town">
+					<option value="Киев" selected>Киев</option>
+					<option value="Львов">Львов</option>
+					<option value="Одесса">Одесса</option>
+				</select>
+				<input type="text" name="email" value="" placeholder="Электронная почта" id="mail_form2" class="require" data-validate="isEmail" />
+				<textarea class="message require" name="message" id="message_form2" data-validate="isString"></textarea>
+				<input type="submit" class="submit" id="send_form2"/>
+			</form>
+			<br class="clr"/>
+		</div>
+			
+	</main><!-- .content -->
+
+	<footer class="footer">
+		<p class="info">© 2011-2015 ТОВ „АІП АГРОГРУП”<br>
+			Ягоды, фрукты и овощи со всего мира<br>
+			Импорт и дистрибуция</p>
+		<a href="/" class="logo-small"><img src="images/logo-small.png" alt=""></a>
+		<p class="contacts">
+			<a href="mailto:info@agro-group.net" class="mail">info@agro-group.net </a>
+			<span class="phone">
+				<a href="tel:+380968019801">+38 093 320 12 34</a>
+				<a href="tel:+380968019801">+38 096 801 98 01</a>
+			</span>
+		</p>
+		<ul class="social">
+			<li><a href="#"><img src="images/icon-gp.png" alt=""></a></li>
+			<li><a href="#"><img src="images/icon-fb.png" alt=""></a></li>
+		</ul>
+		<br class="clr">
+	</footer><!-- .footer -->
+
+</div><!-- .wrapper -->
+
+</body>
+</html>
